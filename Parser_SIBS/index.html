@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>File Type Parser</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"  crossorigin="anonymous">
+        <style>
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 100px;
+            }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .form-control {
+            width: 400px;
+            height: 40px;
+            font-size: 18px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            width: 150px;
+            height: 40px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: #fff;
+            border: 0;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .fa-check,
+        .fa-times {
+            font-size: 36px;
+            margin-top: 20px;
+        }
+
+        .fa-check {
+            color: green;
+        }
+
+        .fa-times {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>File Type Parser</h1>
+        <div class="form-group">
+            <select class="form-control" id="fileTypeSelect">
+                <option value="S474">S474</option>
+                <option value="DST5">DST5</option>
+                <option value="MOV5">MOV5</option>
+            </select>
+            <input type="text" class="form-control" id="fileTypeInput">
+            <button class="btn" onclick="treatString()">Parse</button>
+            <i class="fas fa-check" id="checkMark" style="display:none"></i>
+            <i class="fas fa-times" id="timesMark" style="display:none"></i>
+            <div class="result"></div>
+        </div>
+    </div>
+    <script src="parser.js"></script>
+</body>
+</html>
